@@ -1,0 +1,331 @@
+$header-height:62rem
+$header-sticky-padnTop:0rem// sticky
+$header-mrgn:33 rem // sticky body
+$navig_size:683rem
+//----------------------------------------------------------------
+$c_Header-fon:#ECF7F3
+
+$c_burger-fon:linear-gradient(249.78deg, rgb(53, 211, 255 , 0.9) -0.64%, rgb(169, 99, 251 , 0.9) 103.6%)
+$c_burger-background-navig:  $c_burger-fon // burger- fon
+
+$c_nav-link:  #fff // text link
+$c_burger-navig__link:$c_nav-link
+$c_burger__ico:#fff
+
+.header   //.header
+  position: relative
+  width:100%
+  padding: 0 50rem 0
+  height: 95rem //fix
+  .container
+     +Fsb
+     overflow: visible
+
+.logo-box
+  margin: 25rem 0 0
+  flex: 0 0 auto
+  // +Font(24rem,24rem,900,)  //(size,h,w,col,name )
+  a svg
+    height: 50rem 
+    
+.navig
+    position: relative   
+    display: flex
+    flex-direction: row
+    align-items: flex-start
+    gap: 50rem   //fix
+    a
+      +size(100%)  //(w ,h,radius ,color,c) 
+      padding: 0  5rem 13rem 5rem //fix
+      display: inline-block
+      +h-zoom(1.2, 0.3s)
+      color: #AA7F12
+    a
+      +size(100%)  //(w ,h,radius ,color,c) 
+      padding: 0  5rem 13rem 5rem //fix
+      display: inline-block
+      +h-zoom(1.2, 0.3s)
+      color: #AA7F12
+      &:hover
+        color: $colorLink
+      
+.navig__wrapper
+    margin: 50rem 0 0
+
+.burger-menu__wrapper
+  display: none
+
+//p   -=  BURGER   =-   
+
+.burger-nav
+  +Abs(0,0,8) // (t,l,z-index,b,r)
+  display: none
+  padding: 0rem 30rem 0
+  background-color: #000
+  +size(100%,100rem)  //(w ,h,radius ,color,c) 
+  justify-content: space-between
+  flex-direction: column
+  &__header
+      height: 100%
+      +Fsb
+      align-items: center
+      // background-color: rgba(66, 242, 110, 0.595)
+  &__footer
+    display: none
+    justify-content: space-between
+    .burger__mail 
+        transform: rotate(90deg) translate(64%)
+        transform-origin: 100% 0% 0  
+
+
+.burger__icon
+  +size(60rem,30rem)  //(w ,h,radius ,color,c) 
+  +center
+  .icon__elm
+    position: relative
+    z-index: 7
+    +size( 7rem ,c)
+    background-color: $gold
+    transition: 0.3s
+    &:hover svg
+      fill: $colorLink  
+    svg 
+      +Abs(-4rem,-5rem,2)  // (t,l,z-index,b,r)
+      transform: scale(0)
+      transition: transform 0.5s //обратка
+
+    &:after , &:before 
+      content: ""
+      +Abs(0,n,3) // (t,l,z-index,b,r)
+      +size(100%,c,$c: $gold)  //(w ,h,radius ,color,c) 
+      transition: .3s
+    &:after 
+      left: -15rem
+    &::before
+      left: 15rem
+  &:hover .icon__elm , &:hover .icon__elm::after ,&:hover .icon__elm::before
+      background-color: $colorLink 
+
+
+
+.burger-menu__element
+  display: block
+  margin: 2rem 0
+  +size(100%,20%)  //(w ,h,radius ,color,c) 
+  +Font(155%,155%)
+  // background-color: rgba(66, 242, 110, 0.595)
+
+.burger-menu__element a  
+  +size(100%)  //(w ,h,radius ,color,c) 
+  // background-color: rgba(66, 242, 110, 0.595)
+  padding: 20rem 0
+
+.burger-menu__element a:hover 
+  +h-zoom(1.2, 0.3s)
+  color: $colorLink
+
+.burger__mail:hover
+    color: $colorLink
+
+    
+                                          
+//e -= js =-//p   -=  BURGER   =-   
+body.--js-lock__body--burgerMenu
+      overflow: hidden
+
+body.--js-lock__body--burgerMenu .burger__icon
+  .icon__elm
+    svg 
+      transform: scale(2)
+      transition: transform 0.5s 0.2s
+    &::after ,  &::before
+       left: 0rem
+       transition: 0.3s 0.2s
+
+.burger-nav__btn-box
+  +Abs(0rem, 30%) // (t,l,z-index,b,r)
+  +size(50%,100%)  //(w ,h,radius ,color,c) 
+  +center
+.burger__btn-prev,.burger__btn-next 
+    +size(38%,50%)  //(w ,h,radius ,color,c) 
+    font-size: 25rem
+    text-align: center
+    line-height: 50rem
+    +h-zoom(1.3, 0.3s)
+    svg
+      +size(17rem)  //(w ,h,radius ,color,c) 
+    &:hover
+      color: $colorLink
+    &:hover svg  
+      fill: $colorLink
+.burger__btn-prev svg
+  transform: rotate(90deg)
+  margin: 11rem 5rem 0 0
+.burger__btn-next svg
+  transform: rotate(270deg)
+  margin: 11rem 0 0 5rem
+
+.burger__btn-prev
+  margin: 0 10rem 0 0
+
+
+
+//e        MEDIA    -   1400px  1200px  992px 768px  576px     
+
+
+@media (max-width: 768px)
+  .navig
+    +Abs(-200%,-100%,-2) 
+    opacity: 0 // (t,l,z-index,b,r)
+  .header   //.header
+     padding:0
+     margin: 0
+  .logo-box
+    display: none
+  .burger-nav 
+      display: flex
+  .burger-nav .logo-box
+      margin: 0 
+      display: block
+      a svg
+          height: 60rem 
+
+  .header .container
+      width: 100%
+      position: relative
+
+  .burger-menu__wrapper  //w
+      display: block
+      +Abs(0 , 0 , 4) // (t,l,z-index,b,r)
+      +size(100%)  //(w ,h,radius ,color,c) 
+      margin: 0
+      padding: 0
+  .burger-menu
+    margin: 30% auto 0
+    +size(200rem, 40%)  //(w ,h,radius ,color,c) 
+    display: block
+    text-align: center
+  .burger-menu__element
+    display: flex
+
+  body.--js-lock__body--burgerMenu .burger-nav__footer 
+    +Abs(n,0,-3,0) // (t,l,z-index,b,r)
+    position: absolute
+    width:100%
+    padding:0 30rem 20rem 20rem
+    display: flex
+    .hero-screen_socials
+      height: 200rem
+
+
+@media (max-height: 760px)  //w ВЫСОТА
+  .burger-menu
+    margin: 20% auto 0
+    height: 350rem
+
+
+@media (max-width: 530px)
+  .burger-nav__btn-box
+      +Abs(0rem, 35%) // (t,l,z-index,b,r)
+
+
+@media (max-width: 500px)
+    .burger-nav
+        padding: 0 15rem
+
+
+@media (max-width: 440px)
+  .burger-nav__btn-box
+      +Abs(0rem, 23%) // (t,l,z-index,b,r)
+      +size(300rem,100%)  //(w ,h,radius ,color,c) 
+  .burger-menu
+      margin: 35% auto 0 
+  .logo-box svg
+    width: 100rem
+  .burger__btn-prev,.burger__btn-next 
+    width: 37%
+    height: 50rem
+@media (max-width: 420px)
+  .burger-nav__btn-box
+    top: 24rem
+    width: 270rem
+    height: 50rem
+
+@media (max-width: 385px)
+  .burger-nav__btn-box
+    top: 55rem
+  .burger-menu
+    margin: 25% auto 0
+@media (max-width: 360px)
+  .burger-nav__btn-box
+    left:22%
+@media (max-width: 340px)
+  .burger-nav__btn-box
+    left:12%
+
+
+
+//height
+@media (max-height: 840px) 
+  .burger-nav__footer
+    .hero-screen_socials
+      flex-direction: column
+      margin-bottom: 30rem
+      width: 80rem
+    .burger__mail 
+      margin-bottom: 180rem
+@media (max-height: 610px)
+  body.--js-lock__body--burgerMenu .hero-screen_socials
+    +size(20rem,180rem) 
+    display: block
+    .socials__elm
+        +size(100%,20%)  //(w ,h,radius ,color,c) 
+    
+
+  .burger-nav__footer
+    .hero-screen_socials
+      margin-left: 5vw
+
+      
+
+
+
+
+@media (max-height: 480px) 
+  .burger-menu
+     margin: 20vh auto 0
+  body.--js-lock__body--burgerMenu .burger-nav__footer 
+    bottom: 11vh
+
+
+@media (max-height: 420px) 
+  body.--js-lock__body--burgerMenu .burger-nav__footer 
+    bottom: 30vh 
+
+@media (max-height: 390px) 
+  .burger-nav__btn-box
+      top:35rem
+  .burger-menu
+      margin: 30vh auto 0
+      height: 245rem
+@media (max-height: 370px) 
+  body.--js-lock__body--burgerMenu .burger-nav__footer 
+      bottom: 200rem
+  .burger-menu 
+    height: 220rem
+    a
+      +Font(22rem ,n)  //(size,h,w,col,name )
+    
+@media (max-height: 320px) 
+    .burger-menu
+      margin: 26vh auto 0
+      height: 200rem
+
+
+@media (max-height: 500px) 
+  body.--js-lock__body--burgerMenu 
+    .burger-nav__footer
+      display: none
+
+
+

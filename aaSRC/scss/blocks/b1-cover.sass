@@ -1,0 +1,73 @@
+.cover
+  position: relative
+  margin: 70rem 0 0
+  &_background
+    +size(2176rem, 735rem)  //(w ,h,radius ,color,c) 
+    +Abs(-220rem ,calc(50% - 50vw ),-4) // (t,l,z-index,b,r)
+    background-repeat: no-repeat
+    background-size: cover 
+  .container
+    +Fsb
+
+
+
+.background_ellipse 
+  width: 318rem
+  +Abs(190rem,-160rem,-2) // (t,l,z-index,b,r)
+  &--b
+    width: 235rem
+    top: 30rem
+    left: auto
+    right: -130rem
+
+
+
+.cover_left
+  width: 455rem
+  padding: 69rem 0 0
+.cover__right
+  img 
+    width: 551px
+.cover__txt
+  margin: 20rem 0 40rem
+
+
+.cover__read-more
+  // background: rgba(66, 242, 110, 0.595)  
+  display: inline-flex
+  align-items: center
+  // line-height: 41rem
+  transition: 0.3s
+  color: #4750E7
+
+.read-more_icon
+  margin: 0 20rem 0 0
+  display: inline-flex
+  +size(41rem,c)  //(w ,h,radius ,color,c) 
+  border: 1px solid #4750E7
+  transition: 0.3s
+  align-items: center
+  justify-content: center
+  svg
+    transition: 0.3s
+    +size(23rem)  //(w ,h,radius ,color,c) 
+
+
+
+.cover__read-more:hover
+  transition: 0.3s
+  color: #9196ff
+  .read-more_icon
+    transition: 0.3s
+    border: 1px solid #9196ff
+  svg
+    transition: 0.3s
+    fill: #9196ff
+
+
+
+
+
+
+//e  MEDIA    -   1400px  1200px  992px 768px  576px       */  
+@media (max-width: 1050px)

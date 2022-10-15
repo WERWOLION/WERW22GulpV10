@@ -1,0 +1,15 @@
+//test-box
+  %t-box-defaults{//opacity: 0.5; border: 3px solid rgb(0, 0, 0) ;
+ }
+.t-box{
+  &_red{ @extend %t-box-defaults;
+    background-color: rgba(165, 42, 42, 0.115);}
+  &_yellow{ @extend %t-box-defaults;
+    background-color: rgba(147, 165, 42, 0.315);}
+  &_green{ @extend %t-box-defaults;
+    background-color: rgba(56, 165, 42, 0.215); }
+  &_blue{ @extend %t-box-defaults;
+    background-color: rgba(42, 95, 165, 0.415);}
+} //END ----test-box
+
+

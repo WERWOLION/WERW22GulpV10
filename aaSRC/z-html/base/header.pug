@@ -1,0 +1,90 @@
+include ../aLib-and-modulus/svg-lib
+include ../aLib-and-modulus/M-mixin
+
+mixin logoB
+   .logo-box
+      a(href= "index.html") 
+         +svg_Logo
+
+mixin M__burger-menu
+    ul.burger-menu
+      li.burger-menu__element
+        a(href="#we").--js_close-burger.--link_effect   Мы
+      li.burger-menu__element
+        a(href="#capabilities").--js_close-burger.--link_effect  возможности
+      li.burger-menu__element
+        a(href="#advantagesTarget").--js_close-burger.--link_effect  Преимущества
+      li.burger-menu__element
+        a(href="#gallery").--js_close-burger.--link_effect  Галерея
+      li.burger-menu__element
+        a( href="#galleryNavB").--js_close-burger.--link_effect  События
+      li.burger-menu__element
+        a( href="#developmentsNav").--js_close-burger.--link_effect  Отзывы
+      li.burger-menu__element
+        a( href="#contacts").--js_close-burger.--link_effect  контакты
+
+
+
+
+mixin M_burger-menu
+    section.burger-menu__wrapper
+          +M_services_hero_burger-menu
+          section.burger-nav__footer
+              +M_socials-a    
+              a(href="mailto:info@mythril.space").burger__mail  info@mythril.space
+    section.burger-nav
+          section.burger-nav__btn-box
+              a(id="sBurgPrevBtn" href="#!").burger__btn-prev
+                +svg_arrow-down 
+                | prev 
+              a(id="sBurgNextBtn" href="#!").burger__btn-next next
+                    +svg_arrow-down 
+          section.burger-nav__header
+            +logoB
+            .burger__icon
+                .icon__elm
+                  +svg_cross
+
+mixin M_burger-menu_b
+  section.burger-menu__wrapper
+    img(src="@img/seo/logo.svg", alt="Logo").cover__logo
+    +M__burger-menu
+    section.burger-menu__bottom
+      .burger-menu__socials 
+          div Мы в соцсетях:
+          ul.footer_socials
+            li
+                a.footer_nav__link(href='#popUpJsMessageTest').--js_link.--js_close-burger.--link_effect VK 
+            li
+                a.footer_nav__link(href='#popUpJsMessageTest').--js_link.--js_close-burger.--link_effect OK 
+            li
+                a.footer_nav__link(href='#popUpJsMessageTest').--js_link.--js_close-burger.--link_effect Telegram
+      .burger-menu__separator
+      address.burger-menu__address  Москва, <br> Волоколамское шоссе, д.88
+        
+         
+
+                
+
+
+               
+
+
+//-/*p                                                                      
+header.header
+  .container
+    article.my-balance 
+        .my-balance__name My balance
+        .count-box
+          span.my-balance__count 27.23 
+          span NEAR
+    h1 Heads or Tails
+    article.header__btn.btn
+          a(href="#!") Connect to NEAR
+
+    
+
+  
+
+
+

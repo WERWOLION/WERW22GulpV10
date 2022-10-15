@@ -1,0 +1,93 @@
+//w -   mixin                                                                                                     
+// /*e burger-menu  */// CLASS  .burger__icon   .navig  --js-active__burger-menu
+@mixin  JS-burger-menu     
+    .navig.--js-active__burger-menu   ///--js-lock__body--burgerMenu
+      right: -300rem
+      transition: right 0.7s ease 0s
+    body.--js-lock__body--burgerMenu
+      overflow: hidden
+      .burger__icon
+        span 
+          transform: scale(0) translate(0rem,-50%)
+        &::before 
+          bottom:50%
+          transform: rotate(45deg) translate(0,50%)
+        &:after 
+          top:50% 
+          transform: rotate(-45deg) translate(0,-50%)
+//   @include  JS-burger-menu;
+//w - - =   END   mixin    = - -                                  
+
+@mixin  Burger-menu-Full  
+// @media (max-width: 768px) 
+  .logo
+    display: none
+  .burger-nav
+    width: 100%
+    @include FsbA
+    padding: 2rem 15rem
+    .logo
+        display: block
+        +size(100rem,n)
+  
+  //----------------------------
+  .burger__icon
+    position: relative
+    z-index: 7
+    +size(  40rem , 20rem)
+    // cursor: pointer
+    span, &:after , &:before 
+      @include Abs (n,0,n,n)
+      @include size(100%,10%)
+      transition: .3s
+      // background-color: $c_burger__ico
+    &:after , &:before 
+      content: ""
+    &:after 
+      top: 0
+    &::before
+      bottom: 0
+    span 
+      top:50%
+      transform: scale(1) translate(0rem,-50%)
+
+  .header
+    margin: 0
+    &_body
+      display: block
+      // height: $header-height
+      @include Fix(0rem,0,n,n) // ($top,$left,$bottom,$right);
+      z-index: 7
+      padding:0 0rem 0 0
+    .container
+        display: block
+        position: relative
+
+    .navig 
+      &__menu
+        flex-direction: column
+        +center
+
+      @include Fix(70rem , n , 5, n,0) // (t,l,z-index,b,r)
+      margin: 0
+      padding: 0
+      border-radius: 20rem 0 0 20rem
+      width: 270rem
+      height: 100%
+      overflow: auto
+      max-height: 330rem
+
+      display: block
+
+      transition: right 0.7s ease 0s
+      // background-color: $c_burger-background-navig
+    .btn-press 
+      display: none
+
+    .navig__element
+      margin: 0
+      display: block
+      &--link
+        padding: 17rem 20rem
+        display: block
+        // color:$c_burger-navig__link

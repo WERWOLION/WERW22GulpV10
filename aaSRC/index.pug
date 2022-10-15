@@ -1,0 +1,108 @@
+//-   command gulp   + использовать пути   @img   @scss  @js //  npm i -d name
+//-   npm run dev          npm run build    
+//-    npm run zip        npm run svgSprive       
+- const titleSite = 'Heads or Tails';
+- const descriptionSite = 'Heads or Tails';
+- const socialDescription = 'Heads or Tails';
+- const keywords = 'Heads or Tails ';
+- const lang = 'en';
+- const logoUrl = '@img/Logo.svg';
+- const socialImage = '@img/seo/socialImage.jpg';
+- const urlSite = 'https://werwolion.ru/';
+- const urlPage = 'https://werwolion.ru/';
+- const maleSite = 'werwolion@gmail.com';
+- const maleAutourReply = 'werwolion@mail.ru';
+
+
+//-modules
+include z-html/aLib-and-modulus/svg-lib
+include z-html/aLib-and-modulus/mix
+include z-html/aLib-and-modulus/M-mixin
+//-  ----------------/*W E B/-------------------------------------
+
+doctype html
+html(lang= lang)
+ include z-html/base/head
+ body
+    include z-html/base/header 
+    include z-html/blocks/b1-cover 
+    include z-html/blocks/b2-bid
+
+
+    //- include z-html/modulus/popUPjs
+    include z-html/blocks/b10-PopUp
+    //- include z-html/blocks/b11-PopUp_form
+    //- include("z-html/moduls/toTop.html")  
+
+    //- ----- END  page  ----
+    //- include z-html/base/footer 
+
+
+//-<br>
+//W -= class name =- 
+//-.container holder, box 
+//- wrapper, wrap — обёртка, обычно внешняя
+//-inner — внутренняя обёртка
+
+//-ttl  __desc
+//- row — контейнер в виде строки  //col, column —  виде столбца 
+//- grid — раскладка  в виде сетки
+
+//- control — элем упр,пр стрел «Вперёд/назад» управ слайдером
+//- dropdown — выпадающий список
+
+//- title, subject, heading, headline, caption 
+//- subtitle 
+//- slogan — слоган
+//- lead, tagline — лид-абзац в тексте
+//- desc — описание, вариант текстового контента
+
+//- excerpt — отрывок текста, обычно используется перед ссылкой «Читать далее…»
+//- copyright, copy — копирайт
+
+//- list, item 
+
+//-img ,pic //    thumbnail, thumb — миниатюра, уменьшенное изображение
+//- userpic, avatar
+
+
+
+//- search — поиск
+//- socials — блок иконок соцсетей
+//- advertisement, adv, commercial, promo — рекламный блок (режутся Адблоком, не рекомендуется использовать такие классы для блоков с внутренней рекламой)
+//- features, benefits — список основных особенностей товара, услуги
+//- slider, carousel — слайдер, интерактивный элемент с прокруткой содержимого
+//- pagination — постраничная навигация
+//- user, author — пользователь, автор записи или комментария
+//- meta — блок с дополнительной информацией, например, блок тегов и даты в посте
+//- cart, basket — корзина
+//- breadcrumbs — навигационная цепочка, «хлебные крошки»
+//- more, all — ссылка на полную информацию
+//- modal — модальное (диалоговое) окно
+//- popup — всплывающее окно
+//- tooltip, tip — всплывающие подсказки
+//- preview — анонс, отрывок, например новости или поста, может состоять из заголовка, описания и картинки. Предполагается ссылка на полную версию
+
+
+//- phone, mobile
+//- phablet — телефоны с большим экраном (6-7″)
+//- tablet — планшеты
+//- notebook, laptop — ноутбуки
+//- desktop — настольные компьютеры
+
+//- tiny — маленький, крохотный
+//- small — небольшой
+//- medium — средний
+//- big, large — большой
+//- huge — огромный
+//- narrow — узкий
+//- wide — широкий
+
+
+//- active, current — активный элемент, например, текущий пункт меню
+//- hidden — скрытый элемент
+//- error — статус ошибки
+//- warning — статус предупреждения
+//- success — статус успешного выполнения задачи
+//- pending — состояние ожидания, например, перед сменой статуса на error или success
+

@@ -1,0 +1,13 @@
+{
+  "px-to-rem.px-per-rem": 1,
+  "compile-hero.disable-compile-files-on-did-save-code": false,
+  "git.ignoreLimitWarning": true,
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#143329",
+    "titleBar.activeBackground": "#1C4739",
+    "titleBar.activeForeground": "#F7FCFA"
+  },
+  "cSpell.words": [
+    "Неиндефицированна"
+  ]
+}

@@ -1,0 +1,67 @@
+mixin M_bid__section(img, ttl,txt)
+  section.bid
+
+mixin orders_row  
+    ul(id="order1").orders__row
+      li.orders__coin Head
+      li.orders__flips 200  
+        span NEAR
+      li.orders__time 10 
+        span min
+      li(align="right").orders_table__btn
+        a(href="") accept a bid and flip
+
+
+
+
+//e                             
+.container
+  section.bid
+    section.bid_head
+        article.coin(style="background-image: url(../img/svg/coin.svg);") 
+          span HEAD
+        article.btn.bid__btn
+          a(href="#popUpHead").--js_link Place a bid
+        article.bid_head__display 
+          h4 Heads: 
+          div(id="headDisplay") 0 
+  
+
+    section.bid_stats
+      .bid_stats__top 
+          h4 stats
+          h4 Total flips: 
+            span(id="totalFlips") 0
+      .bid_stats__bottom
+          h4 Top bid: 
+            span(id="topBid") 0 NEAR  
+    
+
+    section.bid_tail
+        article.coin(style="background-image: url(../img/svg/coin.svg);")
+          span TAIL
+        article.bid_tail__display
+          h4 Tails:
+          div(id="tailDisplay") 0  
+        article.btn.bid__btn
+          a(href="#popUpTail").--js_link Place a bid
+ 
+      
+     
+
+
+section.orders
+  img(src="@img/svg/Ellipse2.svg" , alt="background ellipse").background_ellipse 
+  img(src="@img/svg/Ellipse3.svg" , alt="background ellipse").background_ellipse.background_ellipse--b 
+  .container
+    h2  Open orders
+    section(id="ordersTable").orders_table
+
+
+ 
+
+
+footer.footer
+  .container
+    .separator
+    <small>&copy; Все права защищены. 2022</small>

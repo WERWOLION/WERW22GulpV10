@@ -1,0 +1,244 @@
+.pop-up--solo
+  +border( 1px , #f60707 ) // (size,color)
+  padding: 0 3vw
+  display: block
+  height: 85vh
+
+  .pop-up_socials
+    position: relative
+    z-index:4
+    // background: rgba(66, 242, 110, 0.595)
+    overflow: visible
+    padding: 0 2rem
+
+  .pop-up_nav
+    left: auto
+    right: 40rem
+
+
+  .pop-up__top
+    margin: 30rem 0  40rem
+  .pop-up__right_box
+    margin: 0
+    width: 100%
+    height: auto
+    max-height: 300rem
+  .pop-up__txt 
+    width: 80%
+    margin: 20rem 0
+
+
+  .-slider-gallery
+    overflow-x: hidden
+    margin: 0 auto
+    width: 100%
+    height: auto
+  
+
+  .-solo_gallery
+    +center
+    margin: 0
+    height: 32vh
+    position: relative
+    z-index:5
+  .pop-up__img-wrapper
+    width: 58vh
+    height: 45vh
+    margin: 0 auto
+    +center
+    img
+      object-fit: contain
+      width: 100%
+      height: 100%
+  .pop-up__img-wrapper--a
+    margin-right: 1vw
+  .pop-up__img-wrapper--a.--hover:hover
+      transform: scale(1.4) translate( 20%,0)
+  .--hover
+    transition: 0.3s $eo
+    &:hover
+      transition: 0.4s $eo 0.5s
+      transform: scale(1.4) translate( -20%,0)
+
+  .pop-up__background
+    +size(150vw,150vh)  //(w ,h,radius ,color,c) 
+
+  .-solo_gallery--video
+    height: 400rem
+    margin: 80rem auto 0rem
+
+  video
+    width:1280rem * 0.7
+    height: 720rem  * 0.7
+
+// .pop-wrapper video
+//   display: none
+// .pop-wrapper.--js_open-pop-up  video
+//   display: block
+//   // display: none
+
+
+
+
+
+//el   MEDIA    -   992px    */  
+
+  
+@media (min-width: 2000px)
+  .pop-up--solo
+    .pop-up__img-wrapper
+      width: 60vh
+      max-width: 720rem
+      height: 40vh
+      // img
+      //   +size(100%)  //(w ,h,radius ,color,c) 
+    .-solo_gallery
+      margin: 5vh auto 0
+      height: 35vh
+@media (min-width: 2000px) and (max-height: 800px)
+  .pop-up--solo
+    .-solo_gallery
+      overflow: visible
+      margin: 0 auto 
+    .pop-up__img-wrapper
+      width: 70vh
+      height: 50vh
+@media  (min-width: 2000px)  and (max-height: 1300px)
+  .pop-up--solo video
+    width:100vh * 0.7
+    height:100vh * 0.563  * 0.7
+@media  (min-width: 2000px)  and (max-height: 800px)
+  .pop-up--solo video
+    width:100vh * 1.2
+    height:100vh * 0.563  * 1.2
+
+
+
+
+
+
+
+@media (max-width: 900px)
+  .pop-up--solo 
+    .-slider-gallery
+      width: 80vw
+      height: 46vw
+      overflow: hidden
+    .pop-up__img-wrapper
+      width: 60vw
+@media (max-width: 820px)
+  .pop-up--solo 
+    overflow-y: auto
+    .pop-up__right_box
+      padding: 0
+    .pop-up__img-wrapper
+      width: 80vw
+    .-solo_gallery
+      height: 66vw
+    .-solo_gallery--video
+      height: auto
+  .pop-up--solo video
+    width:100vw
+    height:100vw * 0.563 
+
+
+
+
+
+
+@media (max-width: 770px)
+  .pop-up--solo 
+    .-slider-gallery
+      width: 80vw
+      height: 55vw
+
+      
+
+@media (max-width: 670px)
+  .pop-up--solo 
+    padding: 0 7vw 
+    .pop-up_nav
+      // background: rgba(66, 242, 110, 0.595)
+      left: 0rem
+      width: 100vw
+      bottom: 50rem
+      padding: 0 7vw 
+
+@media (max-width: 630px)
+  .pop-up--solo 
+    .pop-up__img-wrapper
+      width: 88vw
+
+@media (max-width: 570px)
+  .pop-up--solo 
+    height: 100vh
+    .pop-up_socials 
+        height: 30rem
+        transform: translateX(0)
+        opacity: 1
+   
+
+//p  height
+
+    
+      
+
+
+
+@media (max-height: 800px)
+  .pop-up--solo 
+    height: 96vh
+    .pop-up__right_box
+      overflow: hidden
+      padding-bottom: 80rem
+      max-height:1900rem
+    .pop-up_nav 
+      bottom: 0rem
+    // video
+    //   width:100vw * 0.7
+    //   height:100vw * 0.563 * 0.6
+    .-solo_gallery--video
+      height: 450rem
+    //   margin: 80rem auto 0
+  
+
+@media (max-height: 730px)
+  .pop-up--solo 
+    .pop-up_nav 
+      bottom: -100rem
+@media (max-height: 650px)
+  .pop-up--solo 
+    .pop-up_nav 
+      bottom: -200rem
+@media (max-height: 550px)
+  .pop-up--solo 
+    .pop-up_nav 
+      bottom: -350rem
+
+
+      
+@media  (max-width:570px) and  (max-height:680px) , (max-height:800px)
+  .pop-up--solo .pop-up__right_box
+      overflow: visible
+
+
+// gallery--video
+@media (max-width: 600px) and (max-height: 800px)
+  .pop-up--solo video
+    width:90vw
+    height: auto
+  .-solo_gallery.-solo_gallery--video
+    // background: rgba(66, 242, 110, 0.595)
+    height: 40vh
+    margin: 0 auto
+
+@media (max-width: 470px) and (max-height: 800px)
+  .-solo_gallery.-solo_gallery--video
+      // background: rgba(66, 242, 110, 0.595)
+      height: 30vh
+      margin: 0 auto
+@media (max-width: 350px) and (max-height: 800px)
+  .-solo_gallery.-solo_gallery--video
+      // background: rgba(66, 242, 110, 0.595)
+      height: 25vh
+      margin: 0 auto

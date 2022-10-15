@@ -1,0 +1,99 @@
+//SEL - moduls SASS mixins                                  
+= input
+  .input
+    box-shadow: 0 10rem 20rem rgba(0, 0, 0, 0.05)
+    transition: opacity 0.3s
+    &:focus
+      border-color: #2FAB73
+      & ~ .input__label span 
+        transition: opacity 0.3s
+        opacity: 0
+  .input__label
+    +Abs(14rem,18rem, -1) // (t,l,z-index,b,r)
+    display: flex
+    img
+      margin-right: 8rem
+  .input__btn
+    +FsbA
+    +size(121rem,45rem,n,#2FAB73)  //(w ,h,radius ,color,c) 
+    border-radius: 0 22rem 22rem 0 
+    padding: 0 12rem
+    img 
+      +size(12rem)
+    span  
+      +Font(14rem, 21rem, 500 , #FFFFFF)  //(size,h,w,col,name )  
+
+= border-line()
+    position: relative
+    &::before
+      content: ""
+      +Abs(n,0,n,0,13rem) // (t,l,z-index,b,r)
+      background: #E0E8F2
+      height: 1rem 
+
+= background-glass($opacity,$z, $url:n ,$c:n)
+  // position: relative;
+  backdrop-filter: blur(21rem)   
+  box-shadow: 0rem 4rem 24rem -1rem rgba(255, 255, 255, 1)
+  &:before
+      +Abs(0,0,$z,0,0) // (t,l,z-index,b,r)
+      content: ""
+      opacity: $opacity 
+      @if $url != n
+        background:$url
+      @if $c != n 
+         background: $c
+      @-moz-document url-prefix()
+        filter: url(#svgBlur)
+  &:after // box-shadow
+      content: ""
+      +Abs(0,0,-1,0,0) // (t,l,z-index,b,r)
+      box-shadow: (0rem 4rem 4rem rgba(0, 0, 0, 0.25))
+      border-radius: 15rem 
+//-- END    ===---- 
+
+// /*e  SPECIAL                          
+@mixin GLASS
+  //W GLASS!!!!!
+  &_wrapper__glass-background
+      position: relative
+      margin: 90rem auto
+      backdrop-filter: blur(21rem)
+      +size(1048rem,693rem,15rem)  //(w ,h,radius ,color,c) 
+      box-shadow: 0rem 4rem 24rem -1rem rgba(255, 255, 255, 1)
+      +background-opacity(0.12, -3, url(../img/Glass-background.png)) //	@include background-opacity($opacity,$z, $url:n ,$c:n) ;  // url(../img/Glass-background.png)
+
+      &::before  // background img glass
+        mix-blend-mode: overlay
+        border-radius: 15rem
+        @-moz-document url-prefix()
+          filter: url(#svgBlur)
+      &:after
+        content: ""
+        +Abs(0,0,11,0,0) // (t,l,z-index,b,r)
+        box-shadow: (0rem 4rem 4rem rgba(0, 0, 0, 0.25))
+        border-radius: 15rem 
+
+      .glass-background--drop-shadow
+        background: linear-gradient(141.51deg, rgba(255, 255, 255, 0) 0.96%, rgba(255, 255, 255, 0.19) 99.4%)
+        +Abs(0,0,-5,0,0) // (t,l,z-index,b,r)
+        filter: drop-shadow(0rem 39.1656rem 55rem rgba(18, 0, 62, 1))
+        border-radius: 15rem
+// @mixin SP_
+
+= M_background-opacity($opacity,$z, $url:n ,$c:n)
+  // position: relative;
+  &:before
+      content: ""
+      +Abs(0,0,$z,0,0)// (t,l,z-index,b,r)
+      opacity: $opacity
+      @if $url != n 
+        background:$url
+      @if $c != n 
+        background: $c
+// M_background-opacity($opacity,$z, $url:n ,$c:n)        
+
+
+
+
+//  - END

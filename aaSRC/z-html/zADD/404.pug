@@ -1,0 +1,35 @@
+//-   command gulp   + использовать пути   @img   @scss  @js -->
+//-   npm run dev          npm run build    
+//-    npm run zip        npm run svgSprive        npm i     
+- const titleSite = 'Mithril Studio';
+- const descriptionSite = 'Art & NFT Development Studio';
+- const socialDescription = 'Art & NFT Development Studio';
+- const keywords = 'Art, NFT, Development Studio , Mithril Studio';
+- const lang = 'en';
+- const logoUrl = '@img/Logo.svg';
+- const socialImage = '@img/Logo.svg';
+- const urlSite = 'https://mithril-studio.com/';
+- const urlPage = 'https://mithril-studio.com/';
+- const maleSite = 'https://mithril-studio.com/';
+- const maleAutourReply = 'werwolion@mail.ru';
+
+//-modules
+include z-html/aLib-and-modulus/svg-lib
+include z-html/aLib-and-modulus/mix
+include z-html/aLib-and-modulus/M-mixin
+include z-html/blocks/b5-about-mobile
+
+doctype html
+html(lang= lang)
+ include z-html/base/head
+ body
+    header.header_privacy-policy
+      .logo-box
+          a(href= "index.html") 
+            +svg_Logo
+
+      a(href="index.html").privacy-policy__home.--link_hover  Home 
+
+    section.error
+      h1  error 404 !
+      h2  Page not found!

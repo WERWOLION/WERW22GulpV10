@@ -1,0 +1,212 @@
+.popUP {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 26, 73, 0.178);
+  opacity: 0;
+  visibility: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
+}
+
+.popUP:target .popUP__content {
+  -webkit-transform: perspective(600rem) translate(0px, 0px) rotateX(0deg);
+          transform: perspective(600rem) translate(0px, 0px) rotateX(0deg);
+  opacity: 1;
+}
+
+.popUP:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popUP__area {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.popUP__body {
+  min-height: 100%;
+  padding: 30rem 20rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.popUP__content {
+  background-color: #6957ed;
+  border-radius: 20rem;
+  max-width: 600rem;
+  padding: 50rem;
+  -webkit-box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.25);
+  position: relative;
+  -webkit-transform: perspective(600rem) translate(0px, -100%) rotateX(45deg);
+          transform: perspective(600rem) translate(0px, -100%) rotateX(45deg);
+  opacity: 0;
+  -webkit-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
+}
+
+.popUP__title {
+  margin: 0 0 15rem;
+}
+
+.popUP__text {
+  font-size: 25rem;
+  color: white;
+}
+
+.popUP__button--close {
+  position: absolute;
+  right: 10rem;
+  top: 6rem;
+  font-size: 30rem;
+  font-weight: 700;
+  color: #6957ed;
+  width: 30rem;
+  height: 30rem;
+  text-align: center;
+  line-height: 24rem;
+  background-color: #fafafa;
+  border-radius: 50%;
+}
+
+.popUP__button--close:hover {
+  color: #272158;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+/* todo JS  swipe  */
+.popUP--swipe {
+  position: absolute;
+  top: 80rem;
+  right: 120rem;
+  z-index: 7;
+  height: 430rem;
+  opacity: 0;
+  visibility: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
+}
+
+@media (max-width: 1080px) {
+  .popUP--swipe {
+    right: 20rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .popUP--swipe {
+    width: 96%;
+    right: 30rem;
+    top: 0rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .popUP--swipe {
+    width: 105%;
+    right: -10rem;
+  }
+}
+
+.popUP--swipe:target .popUP__content {
+  -webkit-transform: perspective(600rem) translate(0px, 0px) rotateX(0deg);
+          transform: perspective(600rem) translate(0px, 0px) rotateX(0deg);
+  opacity: 1;
+}
+
+.popUP--swipe.--unlocked-popUp-js .popUP__content--swipe {
+  -webkit-transform: perspective(600rem) translate(0px, 0px) rotateX(0deg);
+          transform: perspective(600rem) translate(0px, 0px) rotateX(0deg);
+  opacity: 1;
+}
+
+.popUP--swipe.--unlocked-popUp-js {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popUP__content--swipe {
+  background-color: #6957ed;
+  border-radius: 20rem;
+  height: 350rem;
+  max-width: 600rem;
+  padding: 50rem;
+  -webkit-box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.25);
+  position: relative;
+  -webkit-transform: perspective(600rem) translate(0px, -100%) rotateX(45deg);
+          transform: perspective(600rem) translate(0px, -100%) rotateX(45deg);
+  opacity: 0;
+  -webkit-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
+}
+
+.popUP__content--swipe.female--red {
+  background-color: #ff3b63;
+}
+
+@media (max-width: 660px) {
+  .popUP__content--swipe {
+    padding: 30rem;
+  }
+}
+
+.popUP__text {
+  line-height: 34rem;
+}
+
+@media (max-width: 660px) {
+  .popUP__text-box {
+    padding: 30rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .popUP__text-box {
+    padding: 10rem;
+  }
+}
+
+.popUP__text_ttl {
+  color: white;
+  margin: 0 0 30rem;
+}
+
+@media (max-width: 560px) {
+  .popUP__text_ttl {
+    margin: 0 0 20rem;
+  }
+}
+
+.popUP__text--sub {
+  color: #fff;
+  margin: 0;
+}
+
+@media (max-width: 660px) {
+  .popUP__text--sub {
+    margin-left: 30rem;
+    margin: 0;
+  }
+}
+/*# sourceMappingURL=popUPcss.css.map */

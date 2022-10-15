@@ -1,0 +1,79 @@
+.socials
+   +FsbA
+   width:100rem   
+   &__link-icon
+     &:hover
+       svg
+         fill: rgb(174, 233, 249)
+
+
+.footer
+  padding: 84rem 0 35rem
+  // height: 241rem
+  background: #0D0D0D
+  color: rgba(255, 255, 255, 0.8)
+  +Font(15rem,25rem)  //(size,h,w,col,name )
+  a
+    color: rgba(255, 255, 255, 0.8)
+  &__head
+    +FsbA
+  .logo-img
+    +size(176rem,41rem)  //(w ,h,radius ,color,c) 
+  &_nav
+    width: 683rem
+    &__link
+        +Font(16rem,100%,500)  //(size,h,w,col,name )
+  &__divider
+    margin: 28rem 0
+    +size(100%,1rem,n,#FFFFFF)  //(w ,h,radius ,color,c) 
+    height: 1rem
+    opacity: 0.35
+  &__policy
+    +Fsb
+    width: 228rem
+
+
+//  /*el   MEDIA    -   1400px  1200px  992px 768px  576px       */  
+@media screen and (max-width:1200px)
+  .footer
+    .container 
+      padding: 0 15rem
+@media screen and (max-width:1050px)
+  .footer
+    padding-top: 40rem
+  .footer__head
+    flex-wrap: wrap
+  .footer .logo
+    margin: 0 auto
+  .footer_nav
+    margin: 30rem 10rem
+    width: 100%
+  .footer .socials  
+    margin: 0 auto
+@media screen and (max-width:768px)
+  .footer_nav__menu
+    flex-wrap: wrap
+    justify-content: space-between
+    width: 70%
+    margin: 0 auto
+  .footer_nav__elm
+    width: 125rem 
+    margin: 0 0 10rem
+@media screen and (max-width:680px) 
+  .footer_nav__menu
+    width: 80%
+@media screen and (max-width:600px) 
+  .footer_nav__menu
+    width: 90%
+@media screen and (max-width:460px)
+  .footer_nav__elm
+    width: 40%
+
+
+
+
+
+
+
+
+

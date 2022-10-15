@@ -1,0 +1,137 @@
+.bid
+  margin: 28rem auto 0
+  max-width: 1013rem
+  +Fsb
+.bid_head ,.bid_tail
+  position: relative
+
+.coin
+  width: 220rem
+  height: 211rem
+  +B_bg
+  +center
+  +Font(32rem ,39rem,700,#5E3F00)  //(size,h,w,col,name )
+ 
+
+
+.bid__btn
+  +Abs(n,6rem ,1,-72rem) // (t,l,z-index,b,r) 
+  +size(208rem,47rem)  //(w ,h,radius ,color,c) 
+
+.bid_head__display ,.bid_tail__display
+  position: absolute
+  z-index: -2
+  top: 47rem
+  +size(270rem,116rem,10rem,#EFEFEF)  //(w ,h,radius ,color,c) 
+  div
+    font-size: 22rem
+    margin-top: 3rem
+
+.bid_head__display 
+  left: 95rem
+  padding: 35rem 0 0 137rem
+.bid_tail__display
+  right: 95rem 
+  padding: 35rem 137rem 0 0
+  text-align: right
+
+
+.bid_stats
+  text-align: center
+  span
+    font-weight: 400
+.bid_stats__top
+  margin-top: 47rem
+  div
+    margin-top: 9rem
+.bid_stats__bottom
+  margin-top: 67rem
+
+
+
+//e             
+.orders
+  margin: 56rem 0 0
+  width: 100vw
+  overflow: hidden
+  position: relative
+  .background_ellipse 
+    +Abs(800rem,-90rem,-2) // (t,l,z-index,b,r)
+    width: 150rem
+    &--b
+      top: 400rem
+      width: 260rem
+      left: auto
+      right: -160rem
+  h2
+    text-align: center
+    margin-bottom: 43rem
+
+.orders__row
+    +size(100%, 82rem)  //(w ,h,radius ,color,c) 
+    +Fsb
+    margin-bottom: 17rem
+    padding-left: 30rem
+    align-items: center
+    font-size: 24px
+    li
+      margin-right: 34rem
+      font-weight: 400
+      flex: 0 0 auto
+      text-align: center
+    span
+      margin-left: 4rem
+    .orders__coin 
+      font-weight: 700
+.orders__coin
+  width: 62rem
+.orders__flips
+  min-width: 120rem
+.orders__time
+  width: 180rem
+
+.orders_table
+  display: flex
+  flex-direction: column
+  overflow-y: scroll
+  max-width: 1013rem
+  margin: 0 auto
+  height: 1100rem
+
+
+.orders_table__btn
+  margin-left: auto
+  margin-right: 0
+  flex: 1 1 auto
+  a
+    display: inline-block
+    +size(243rem , 43rem, 5rem)
+    +Font(18rem ,43rem,700)  //(size,h,w,col,name )//(w ,h,radius ,color,c) 
+    text-align: center
+    border: 1px solid #4750E7
+    filter: drop-shadow(0px 9px 17px rgba(0, 0, 0, 0.15))
+    color: #4750E7
+
+
+
+//e             
+.footer
+  padding: 30rem 0
+  text-align: center
+  small
+    display: block
+    margin-top: 30rem
+    +Font(16rem ,19rem)  //(size,h,w,col,name )
+  .separator
+    +size(100%,1px ,n, #D2D2D2 )  //(w ,h,radius ,color,c) 
+  
+
+
+//e   MEDIA    -   1400px  1200px  992px 768px  576px       */  
+// @media (max-width: 768px)
+
+
+
+
+
+

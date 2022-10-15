@@ -1,0 +1,42 @@
+.titul{
+  letter-spacing: $letter-spacing-titule;
+
+  background-image: url(/img/title.jpg); 
+  background-repeat:no-repeat;
+  background-position: center center;
+  width: 100%;
+  height: 700px ;
+  &-box{
+    padding: 200px 0 ;
+  }
+  &-text{
+    margin: 0 30%;
+    width: 800px;
+    color: $c-light;
+    background:$c-dGrin09;
+    padding: 20px;
+    &__title{
+      margin:0;
+      font-size: 50px;
+
+      font-weight: bolder;
+      font-family:$font-ttl ;
+      line-height:45px ;
+    }
+    &__subtitle{
+      margin:1px 0 25px 25px;
+      font-size: 40px;
+      color: $c-wite;
+
+      font-weight: 700;
+      font-family:$font-ttl ;
+    }
+    &__descript{
+      margin:  0 0 0 45px;
+      font-size: 19px;
+      line-height:30px ;
+    }
+  }
+
+  
+} // END .titul

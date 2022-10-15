@@ -1,0 +1,178 @@
+@import 'fonts'  //  ----- подкл шрифтов-------------
+@import "aDefault/_googl-fonts"
+@import "aDefault/_unitconversion"
+// ♠♠♠♠♠♠♠♠   END     ♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠ - подкл шрифтов
+$font-base: 'Roboto',Helvetica, Arial, sans-serif  // 1!
+$font-ttl: 'Roboto',Helvetica, Arial, sans-serif  // 2!
+$font-secondary:'Roboto',Helvetica, Arial, sans-serif  // 2!
+
+// ▼ ▼ ▼ ▼ ▼ ▼   Color  = $c_  ------------------------
+$c_font-base :  #000// 1
+$c_font-ttl :  #000 // 2
+                
+$gold: #AA7F12
+$colorLink:#fff 
+
+$c_blue:  #4F79DF
+
+
+
+// $shadow-txt:0 0 .65px $font-ttl, 0 0 .65px $font-ttl
+
+// $container-size:1140rem   //w  контейнер
+
+// ----scrollbar----
+$scrollbar-size:16rem  
+$scrollbar-height:117rem                    // 3
+$scrollbar-border-size:1rem                     // 3
+$scrollbar-border-radius:90rem                     // 3
+$c_scrollbar-background:#F6F8FD
+$c_scrollbar: $c_blue
+$border-color:#F6F8FD// input
+//♠♠♠♠♠♠♠♠♠---END---♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠ 
+$c_sticky-header_background:rgba(236, 247, 243, 0.8)
+
+$i:inherit 
+
+//---- ▼ ▼ ▼ ▼    default     ▼ ▼ ▼ ▼ ----------▼ ▼ ▼ ▼  ▼ ▼ ▼ ▼  ▼ ▼ ▼ ▼  ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼  ▼ ▼ ▼ ▼  ▼ ▼ ▼ ▼  ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼  ▼ ▼ ▼ ▼  ▼ ▼ ▼ ▼  ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼  ▼ ▼ ▼ ▼  ▼ ▼ ▼ ▼  ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼  ▼ ▼ ▼ ▼  ▼ ▼ ▼ ▼  ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼  ▼ ▼ ▼ ▼  ▼ ▼ ▼ ▼  ▼ ▼ ▼ ▼ 
+@import "aDefault/__mixin"   
+@import "aDefault/_B-mixin" 
+
+@import "aLib-module/modulus"
+@import "aLib-module/hover"
+@import "aDefault/__normalize"
+@import "aDefault/__werw-normalize"
+
+// -animation-
+@import "aDefault/_animation"
+// @import "aLib-module/anmLib"
+//♠♠♠♠♠♠♠♠♠♠♠♠♠   END default  ---♠♠♠♠♠♠♠♠♠♠♠♠♠ -------  ▼ ▼ ▼ ▼  ▼ ▼ ▼ ▼  ▼ ▼ ▼ ▼  ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼  ▼ ▼ ▼ ▼  ▼ ▼ ▼ ▼  ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼  ▼ ▼ ▼ ▼  ▼ ▼ ▼ ▼  ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼  ▼ ▼ ▼ ▼  ▼ ▼ ▼ ▼  ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼  ▼ ▼ ▼ ▼  ▼ ▼ ▼ ▼  ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼  ▼ ▼ ▼ ▼  ▼ ▼ ▼ ▼  ▼ ▼ ▼ ▼ 
+// @import "aLib-module/js"  //e -JS-.
+// font-size: 16rem; - default
+body 
+ +Font(18rem,22rem)  //(size,h,w,col,name ) 
+ font-weight: 400
+ 
+h1
+  @include Font(40rem,49rem)
+h2
+  @include Font(40rem,48rem)
+h3
+  @include Font(28rem,34rem)
+h4
+  @include Font(24rem,28rem,600)//(size,h,w,col,name )
+
+h1
+  font-weight:700
+h2,h3
+  font-weight:700
+img
+  flex-shrink:0 // object-fit: cover
+*,*:before,*:after
+  // user-select: none  //pi запрет выделения текста
+    // pointer-events: none;
+// ▼ ▼    /*e   -module area-    */    --   ▼ ▼ ▼ ▼   ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼  ▼ ▼ ▼ ▼  ▼ ▼ ▼ ▼  ▼ ▼ ▼ ▼  ▼ ▼ ▼ ▼  ▼ ▼ ▼ ▼   
+// @import "module/popUPjs"
+// @import "base/external-libraries/swiper_Vr741" //fix
+// @import "module/font-ico/brands";
+// @import "module/font-ico/fontawesome";
+
+//P   Blocks  area    ▼ ▼ ▼ ▼ 
+// @import "base/header"
+@import "base/header-lite"
+@import "blocks/b0-standart"  
+@import "blocks/b1-cover"
+@import "blocks/b2-bid"
+@import "blocks/b10-PopUp"
+
+
+// @import "blocks/b9-privacy-policy"
+
+
+
+
+// @import "base/footer"
+//TEST  area
+// ♠♠♠♠♠♠♠♠  END modules  AREA   ♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠   
+.container
+  margin: 0 auto
+  max-width: 1140rem  // max-width: $container-size
+  
+  @media (max-width: 1200px)
+    padding:0 15rem
+  // @media (max-width: 575.98px)
+  //   padding:0 10rem
+
+
+
+
+// w  ▼ ▼ ▼ ▼    library  ▼ ▼ ▼ ▼  ▼ ▼ ▼ ▼  ▼ ▼ ▼ ▼  ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼  ▼ ▼ ▼ ▼  ▼ ▼ ▼ ▼  ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼  ▼ ▼ ▼ ▼  ▼ ▼ ▼ ▼  ▼ ▼ ▼ ▼ -----------------------------------------------------------------------
+@import "aDefault/_Library-dev"
+
+
+//e  -media-  // 1400px / 1200px/ 992px / 768px / 576px .   --   ▼ ▼ ▼ ▼ ▼ ▼       ▼ ▼ ▼ ▼ ▼ ▼                         */   
+@media (min-width:900px) and (max-width:1500px)
+    html
+      font-size: calc(6.25% * 0.8) 
+
+
+
+    
+
+
+  
+//      --   ALT  --
+
+
+
+
+
+//pi  Вырвниватель ========================================= 
+
+
+@mixin alignment          //fix
+  body.--js-lock__body
+    padding-right: $scrollbar-size
+  // burger
+  body.--js-lock__body--burgerMenu 
+    padding-right: $scrollbar-size    
+
+  @media (max-width: 993px) 
+    body.--js-lock__body
+      padding-right: 0
+    body.--js-lock__body--burgerMenu 
+      padding-right: 0
+
+  // =============  //w MOZILA  // = = =   = = =   = = =
+  @-moz-document url-prefix()
+    body.--js-lock__body
+      padding-right: 0rem
+    body.--js-lock__body--burgerMenu
+        padding-right: 0     
+//pi - END- moz-document   --  Вырвниватель 
+
++alignment 
+
+
+
+//REVIEW        OPTIMIZE    TSC                        */                              
+//IDEA                                 */                                
+//SEL                                 */                                   
+//BL                                */
+//GR                                 */  
+//EL                              
+ /* FIX     FIXME    BUG   HACK            */
+ /* TODO                      */
+//w                            /                  
+//e                       /
+
+
+
+ // шрифты кода
+//  monospace ,Space Mono, Consolas, 'Courier New', Dank Mono,
+// Space Mono , Dank Mono, 
+// Fira Code ,
+// JetBrains Mono Medium
+
+
+

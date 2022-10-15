@@ -1,0 +1,34 @@
+Options +FollowSymLinks
+RewriteEngine On
+
+#/*w постоянный 301-редирект с адреса www.mysite.ru на mysite.ru 
+RewriteCond %{HTTP_HOST} ^www.werwolion\.ru$ [NC]
+RewriteRule ^(.*)$ http://mithril-studio.com/$1 [R=301,L]
+
+#/*w   Перенаправление с HTTP-версии сайта на HTTPS-версию           
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+
+
+
+#/*w 301 редирект с /index.html на корень
+
+
+#/*w убрать слэш (символ “/”) в конце адреса страницы. 
+
+
+#/*w 404     
+ErrorDocument 404 http://mithril-studio.com/404.html
+
+#/*w убрать .html из URL
+RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
+RewriteRule ^ /%1 [NC,L,R]
+
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^ %{REQUEST_URI}.html [NC,L]
+
+
+
+
+#This works with xxx/index.php too (visiting mysite.com/xxx/)

@@ -1,0 +1,70 @@
+
+// .privacy-policy--body 
+//   overflow: hidden 
+// .privacy-policy 
+//   height: 1900rem
+//   padding-bottom: 2000rem
+//   overflow-y: auto
+.error
+  width: 80%
+  margin: 15vh auto 0
+
+
+
+.header_privacy-policy
+  margin: 20rem auto 0
+  +FsbA
+  width: 90vw
+  .logo-box
+    margin: 0
+  
+.privacy-policy__home 
+  +Font(30rem ,60rem,600)  //(size,h,w,col,name )
+  &:hover
+    color: #fff
+.privacy-policy__container
+  +Font(20rem ,25rem)  //(size,h,w,col,name )
+  +size(85vw)  //(w ,h,radius ,color,c) 
+  margin: 200rem auto
+  h1
+    +Font(60rem ,60rem) 
+    text-align: center
+    margin: 60rem 0
+  h2 
+    +Font(40rem ,40rem) 
+    margin: 40rem 0 20rem
+  // p
+  //   margin-left: 10rem
+  ul
+    margin-left: 40rem
+
+
+
+@media (min-width: 1500px)
+  .privacy-policy--body 
+    overflow: hidden 
+  .privacy-policy 
+    height: 1900rem
+    padding-bottom: 2000rem
+    overflow-y: auto
+
+@media (max-width: 1050px)
+  .privacy-policy 
+    height: 4900rem
+@media (max-width: 570px)
+  .privacy-policy__container
+    margin: 150rem 5vw
+    h1
+      +Font(40rem ,45rem)  //(size,h,w,col,name )
+
+@media (max-width: 500px)
+  .privacy-policy 
+    height: 5900rem
+@media (max-width: 400px)
+  .privacy-policy 
+    height: 7300rem
+    // overflow-y: auto
+@media (max-width: 360px)
+  .privacy-policy 
+    height: 8300rem
+    // overflow-y: auto

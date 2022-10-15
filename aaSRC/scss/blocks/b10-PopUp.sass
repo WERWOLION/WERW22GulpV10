@@ -1,0 +1,178 @@
+
+$popUpWith:1240rem
+$popUpCenter: calc(50% - $popUpWith/2 )
+
+
+$popUP_wrapper-background: rgba(34, 39, 48, 1)
+$popUP_background: #FFF
+
+.pop-up
+  +size(554rem ,378rem,10rem,$popUP_background)  //(w ,h,radius ,color,c) 
+  position: relative
+  margin: 20vh auto
+  overflow: hidden
+  h2
+    text-align: center
+    text-transform: uppercase
+    margin: 80rem 0 30rem
+  input 
+     all: unset
+  .form__input
+    display: block
+    margin: 0 auto
+    padding: 0 20rem
+    +size(357rem,55rem,5rem)  //(w ,h,radius ,color,c) 
+    border: 1px solid #D9D9D9
+    filter: drop-shadow(0px 9px 17px rgba(0, 0, 0, 0.15))
+
+
+.btn-close
+  +Abs(27rem,n,1,n,27rem) // (t,l,z-index,b,r)
+  +size(27rem)  //(w ,h,radius ,color,c) 
+  transition: 0.5s $eo
+  &::after , &::before
+    content:''
+    +Abs(0,13rem,1) // (t,l,z-index,b,r) 
+    +size(1px, 29rem,n,#F55151)  //(w ,h,radius ,color,c) 
+    transform: rotate(45deg) 
+  &::before
+    transform: rotate(-45deg) 
+  &:hover
+    transform: rotate(180deg) 
+    transition: 0.5s $eo
+    cursor: pointer
+    &::after , &::before
+      background: #ab0a0a
+
+
+
+//p  ADD  
+.form__btn 
+  +size(299rem,55rem)  //(w ,h,radius ,color,c) 
+  margin: 30rem auto
+  a
+    +Font(18rem ,55rem)  //(size,h,w,col,name )
+    letter-spacing: 1.3rem
+
+.bet-value
+  text-align: center
+  +Font(48rem ,55rem,300)  //(size,h,w,col,name )
+  margin: 31rem auto
+
+
+
+
+
+
+
+
+
+//js      
+.error-fild
+  text-align: center
+  height: 20rem
+  color: red
+  +Font(16rem ,20rem)  //(size,h,w,col,name )
+  +Abs(12%,70rem,1,n,70rem) // (t,l,z-index,b,r)
+
+
+body.--js-lock__body 
+  overflow: hidden
+
+.popup-wrapper
+  opacity: 0
+  visibility: hidden
+  +Fix(-120%,0,20)
+
+.pop-wrapper.--js_open-pop-up 
+  display: block //fix
+  opacity: 1
+  visibility: visible
+  +Fix(0,0,20) // (t,l,z-index,b,r)
+  +size(100%,200%)  //(w ,h,radius ,color,c) 
+  overflow: hidden
+   
+
+
+//-------------------------------------------------------------------------
+.popup-wrapper
+  +Fix(0,0,20rem) // (t,l,z-index,b,r)
+  +size(100%)  //(w ,h,radius ,color,c) 
+  background:$popUP_wrapper-background
+  //появление------------------------------------
+  opacity: 0
+  visibility: hidden
+  overflow: hidden // вкл прокрутку окна
+  //!анимация---------------
+  transition: all 0.8s ease 0s //++++++++++  
+
+.popup-wrapper.--js_open-pop-up  .pop-up   // transform: translate(0px, 0px) ;  // выподающее
+    transform: perspective(600rem) translate(0px, 0px) rotateX(0deg) //2 Угловое положение
+    opacity: 1
+    transition: all 0.8s ease 0s 
+    //!END-------------
+
+.popup-wrapper.--js_open-pop-up 
+    opacity: 1
+    visibility: visible // target - выбор по ID
+    &__area
+      +Abs(0,0,1) // (t,l,z-index,b,r)
+      +size(100%)  //(w ,h,radius ,color,c) 
+    //END появление-----------------------------------
+.pop-up
+  //!анимация---------------
+  // transform: translate(0px, -100%) ;// ПАДЕНИЕ
+  transform: perspective(600rem) translate(0px, -100%) rotateX(45deg) //2 Угловое положение
+  opacity: 0
+  transition: all 0.8s ease 0s
+  //!END-------------
+
+
+//e    COIN       
+.pop-up__coin
+  +size(200rem,200rem)  //(w ,h,radius ,color,c) 
+  margin: 10rem auto 0
+  background-size: contain
+.pop-up__coin.-js_anm 
+  animation: lib_rotation-axis 0.3s 0s 10 linear
+  // animation: lib_rotation-axis 0.3s 0s infinite linear
+  //  name duration timing-function delay iteration-count direction fill-mode
+
+.pop-up__coin-roulette
+  .btn
+    margin: 15rem auto
+    opacity: 1
+    visibility: visible
+    transition: 0.9s
+  .pop-up_ttl 
+    transition: 0.9s
+    // background: rgba(66, 242, 110, 0.595)
+    height: 25rem
+    margin: 5rem auto 20rem
+    color: #000
+    text-transform: uppercase
+  // .-js_coin-roulette__result 
+  .pop-up_sub-ttl 
+    transition: 0.9s
+    text-align: center
+    +Font(16rem ,18rem)  //(size,h,w,col,name )
+
+
+
+  .--js_hide
+    transition: 0.5s
+    opacity: 0
+    visibility: hidden
+    z-index: -10
+
+
+
+
+
+//e  MEDIA    -   1400px  1200px  992px 768px  576px       */ 
+// @media (max-height:850px) 
+
+    height: 280rem  
+    .gallery__elm
+        margin: 0 40rem 0 0
+        +size(200rem)  //(w ,h,radius ,color,c) 

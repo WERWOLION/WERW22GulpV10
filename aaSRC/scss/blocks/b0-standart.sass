@@ -1,0 +1,26 @@
+.btn
+  +size(183rem,45rem,5rem)  //(w ,h,radius ,color,c) 
+  box-shadow: 0px 9rem 17rem rgba(0, 0, 0, 0.15)
+  overflow: hidden
+  +ha-press() 
+  a
+    color: #fff
+    position: relative
+    display: inline-block
+    +size(100%,100%,5rem,#4750E7 )  //(w ,h,radius ,color,c) 
+    +Font(15rem ,45rem ,600 , #fff ,$font-ttl ) 
+    text-align: center
+    &::after
+      content:'' 
+      +Abs(-30rem,-90rem,1) // (t,l,z-index,b,r)
+      +size(20rem, 190rem , 0, #ffffff)  //(w ,h,radius ,color,c) 
+      transform: rotate(19deg)
+
+
+
+.btn:hover a::after
+    animation: lib_btn-hover_gradient 0.7s linear 0.1s
+
+
+
+

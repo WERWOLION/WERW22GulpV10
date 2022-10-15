@@ -1,0 +1,49 @@
+//-/*e
+section(id='popUpHead').--js-popup.popup-wrapper
+  section.pop-up
+    .btn-close.--js-popup_close
+    div(id='errorFieldHead').error-fild
+    h2 Head    
+    form.form(id="formHead",  onSubmit="") 
+      input(id="formHeadInput" type="text", placeholder="Min bid 1 NEAR", name="NEAR", required  ).form__input
+      //- button(id="formHeadBtn").form__btn(type="submit") Confirm
+      article.btn.form__btn
+          a(id="formHeadBtn" , href="#!" ).-js_enter Confirm
+
+
+//e    
+section(id='popUpTail').--js-popup.popup-wrapper
+  section.pop-up
+    .btn-close.--js-popup_close
+    div(id='errorFieldTail').error-fild
+    h2 Tail  
+    form.form(id="formTail" ,  onSubmit="") 
+      input(id="formTailInput" type="text", placeholder="Min bid 1 NEAR", name="NEAR", required  ).form__input
+      //- button(id="formHeadBtn").form__btn(type="submit") Confirm
+      article.btn.form__btn
+          a(id="formTailBtn", href="#!").-js_enter Confirm
+
+//e             
+section(id='popUpTakeBet').--js-popup.popup-wrapper
+  section.pop-up
+    .btn-close.--js-popup_close
+    h2.pop-up_ttl
+    div.bet-value
+    
+    //- button(id="formHeadBtn").form__btn(type="submit") Confirm
+    article.btn.form__btn
+       a(id='popupConfirmBtn', href="#!").-js_alink.-js_enter Confirm
+
+
+
+//e             
+section(id='popUpCoinRulet').--js-popup.popup-wrapper
+  section.pop-up.pop-up__coin-roulette
+    article.coin.pop-up__coin(style="background-image: url(../img/svg/coin.svg);")
+      .-js_coin-roulette__result  
+    h2.pop-up_ttl 
+    h3.pop-up_sub-ttl 
+    //- div.bet-value
+    //- button(id="formHeadBtn").form__btn(type="submit") Confirm
+    article.btn.form__btn.--js-popup_close.--js_hide
+          a(id='ruletConfirmBtn' ,href="#!").-js_alink.-js_enter.--js_hide OK!

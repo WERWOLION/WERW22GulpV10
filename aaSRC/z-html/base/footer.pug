@@ -1,0 +1,71 @@
+-
+  const footerNav = [
+    {href:'#popUpJsA', name: 'Your benefits' },
+    {href:'#popUpJsA', name: 'Our process'  },
+    {href:'#popUpJsA', name: 'Our works' },
+    {href:'#popUpJsA', name: 'Testimonials' },
+    {href:'#popUpJsA', name: 'Start a project' },
+    ]
+mixin footer-list-element-JS(href,name)
+  li.footer_nav__elm
+    a.footer_nav__link.--js_link(href=`${href}`)= name
+mixin footer-nav(object)
+  nav.footer_nav
+    ul.navig__menu.footer_nav__menu
+      li.footer_nav__elm
+        a.footer_nav__link(href='index.html') Home
+      each item in object
+        +footer-list-element-JS(item.href, item.name) 
+
+mixin M_socials2
+  ul.socials
+    li
+      a(href="#popUpJsMessage").socials__link-icon.--js_link
+        +svg_f-ico_facebook
+    li
+      a.socials__link-icon.--js_link(href="#popUpJsMessage")
+        +svg_f-ico_instagram
+    li
+      a.socials__link-icon.--js_link(href="#popUpJsMessage")
+        +svg_f-ico_twitter
+
+//- end mixin = = = = = = = = = =
+
+
+footer.footer
+  section.footer__top
+      h3 остались вопросы?
+      .footer_sub-ttl свяжитесь с нами
+      .capabilities_btn
+         a(href="#popUpJsMessage").--js_link оставить заявку
+
+
+ 
+
+  section.footer_bottom
+    .cover__rectangle-a
+    .cover__rectangle-b
+    section.footer_left
+        div © 2022
+        div.socials
+          div Мы в соцсетях:
+          ul.footer_socials
+            li  
+              a(href="#popUpJsMessageTest").footer_nav__link.--js_link VK 
+            li
+              a(href="#popUpJsMessageTest").footer_nav__link.--js_link OK 
+            li
+              a(href="#popUpJsMessageTest").footer_nav__link.--js_link Telegram
+
+    section.footer_center
+      img(loading="lazy", src="@img/seo/logo.svg", alt="Logo").footer__logo
+      a(href="#popUpJsMessageTest").--js_link.footer_nav__link  Политика конфиденциальности
+
+
+    section.footer_right
+      div.-spec-mobile Ледовый комплекс «Луч».<br>  Все права защищены.
+      address Москва, <br> Волоколамское шоссе, д.88
+
+
+
+
